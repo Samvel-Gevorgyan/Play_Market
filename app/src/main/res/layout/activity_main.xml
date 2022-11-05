@@ -33,7 +33,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/nav_menu"
+        app:menu="@menu/navigation_menu"
         android:background="@color/dark_grey"
         app:itemTextColor="@color/light_grey"
      />
