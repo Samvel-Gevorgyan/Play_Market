@@ -45,12 +45,12 @@ class MainActivity : AppCompatActivity(), Communicator {
         transaction.commit()
     }
 
-    override fun showBottomSheet() {
+    override fun showBottomSheetCategories() {
         val modalBottomSheet = BottomSheet()
         modalBottomSheet.show(supportFragmentManager, BottomSheet.TAG)
     }
 
-    override fun showBottomSheet2() {
+    override fun showBottomSheet() {
         val dialog=BottomSheetRadioGroup()
         dialog.show(supportFragmentManager,BottomSheetRadioGroup.TAG)
 

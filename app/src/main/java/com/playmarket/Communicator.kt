@@ -2,6 +2,6 @@ package com.playmarket
 
 
 interface Communicator {
+   fun showBottomSheetCategories()
    fun showBottomSheet()
-   fun showBottomSheet2()
 }

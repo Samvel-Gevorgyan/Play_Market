@@ -32,7 +32,7 @@ class FragmentTopChartsGame : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         communicator = activity as Communicator
-        communicator.showBottomSheet2()
+        communicator.showBottomSheet()
 
         binding.recyclerView.apply {
             layoutManager = LinearLayoutManager(activity)
@@ -40,7 +40,7 @@ class FragmentTopChartsGame : Fragment() {
 
         }
         binding.categoriesButton.setOnClickListener {
-            communicator.showBottomSheet()
+            communicator.showBottomSheetCategories()
         }
 
 
