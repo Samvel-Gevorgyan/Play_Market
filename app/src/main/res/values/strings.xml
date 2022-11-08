@@ -15,6 +15,10 @@
     <string name="apps_for_kinds">Apps for Kinds</string>
     <string name="fragment_kinds">fragment_kinds</string>
     <string name="everything_here_is_teacher_approved">Everything here is Teacher Approved</string>
+    <string name="top_paid">Top paid</string>
+    <string name="top_grossing">Top grossing</string>
+    <string name="top_free">Top Free</string>
+    <string name="top_charts">Top Charts</string>
 
 
 </resources>

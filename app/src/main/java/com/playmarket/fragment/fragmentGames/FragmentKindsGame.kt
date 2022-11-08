@@ -21,6 +21,7 @@ class FragmentKindsGame : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
         inflater.inflate(R.layout.fragment_games_top_charts, container, false)
         binding = FragmentGamesKidsBinding.inflate(inflater)
         return binding.root
@@ -30,6 +31,7 @@ class FragmentKindsGame : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.recyclerViewKinds.apply {
+
             layoutManager = LinearLayoutManager(activity)
             adapter = RecyclerAdapterHorizontal(FakeDataSet.getData(), context)
             onFinishTemporaryDetach()

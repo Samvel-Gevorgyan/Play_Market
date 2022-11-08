@@ -17,8 +17,10 @@ class RecyclerAdapterCategories(val context: Context) :
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+
         val binding=RecylceViewCategoriesBinding.inflate(LayoutInflater.from(parent.context),parent,false)
         return ViewHolder(binding)
+
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -42,6 +44,11 @@ class RecyclerAdapterCategories(val context: Context) :
                 Toast.makeText(context, items[absoluteAdapterPosition].categoriesName, Toast.LENGTH_SHORT).show()
             }
         }
+
+    }
+
+
+    companion object{
 
     }
 

@@ -16,9 +16,11 @@ class FragmentGames : Fragment() {
 
 
     override fun onCreateView(
+
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
         inflater.inflate(R.layout.fragment_games, container, false)
         binding = FragmentGamesBinding.inflate(inflater)
         return binding.root

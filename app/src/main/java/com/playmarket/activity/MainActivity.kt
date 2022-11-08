@@ -1,16 +1,18 @@
-package com.playmarket
+package com.playmarket.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import com.playmarket.Communicator
+import com.playmarket.R
 import com.playmarket.botomSheet.BottomSheet
+import com.playmarket.botomSheet.BottomSheetRadioGroup
 import com.playmarket.databinding.ActivityMainBinding
 import com.playmarket.fragment.fragmentApps.FragmentApps
 import com.playmarket.fragment.fragmentGames.FragmentGames
 
 
-
-class MainActivity : AppCompatActivity(),Communicator {
+class MainActivity : AppCompatActivity(), Communicator {
 
     private lateinit var binding: ActivityMainBinding
 
@@ -34,18 +36,23 @@ class MainActivity : AppCompatActivity(),Communicator {
                 }
             }
         }
-
     }
 
-   private fun loadFragment(fragment: Fragment) {
+    private fun loadFragment(fragment: Fragment) {
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.container, fragment)
         transaction.addToBackStack(null)
         transaction.commit()
     }
 
-   override fun showBottomSheet(){
+    override fun showBottomSheet() {
         val modalBottomSheet = BottomSheet()
         modalBottomSheet.show(supportFragmentManager, BottomSheet.TAG)
+    }
+
+    override fun showBottomSheet2() {
+        val dialog=BottomSheetRadioGroup()
+        dialog.show(supportFragmentManager,BottomSheetRadioGroup.TAG)
+
     }
 }

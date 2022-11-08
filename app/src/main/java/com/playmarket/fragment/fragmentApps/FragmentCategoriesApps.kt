@@ -28,7 +28,6 @@ class FragmentCategoriesApps:Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.recyclerViewCategories.apply {
             layoutManager=LinearLayoutManager(activity)
-
             adapter= RecyclerAdapterCategories(context)
         }
     }

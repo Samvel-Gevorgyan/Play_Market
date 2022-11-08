@@ -33,6 +33,8 @@ class FragmentTopChartsApps:Fragment() {
             layoutManager=LinearLayoutManager(activity)
             adapter= RecyclerAdapterApps(FakeDataSet.getData(),context)
 
+
+
         }
     }
 
