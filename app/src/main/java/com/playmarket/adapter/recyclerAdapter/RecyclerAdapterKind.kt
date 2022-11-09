@@ -1,4 +1,4 @@
-package com.playmarket.adapter
+package com.playmarket.adapter.recyclerAdapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -9,8 +9,8 @@ import com.playmarket.data.DataApps
 
 import com.playmarket.databinding.RecylerHorizondalBinding
 
-class RecyclerAdapterHorizontal(private val items: MutableList<Any>, val context: Context) :
-    RecyclerView.Adapter<RecyclerAdapterHorizontal.ViewHolder>() {
+class RecyclerAdapterKind(private val items: MutableList<Any>, val context: Context) :
+    RecyclerView.Adapter<RecyclerAdapterKind.ViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -31,9 +31,9 @@ class RecyclerAdapterHorizontal(private val items: MutableList<Any>, val context
     fun bind(item:Any){
         (item as DataApps).let{
             Glide.with(context)
-                .load(item.appImage)
+                .load(item.imageUrl)
                 .into(binding.appImage)
-            binding.appTitle.text=item.appName
+            binding.appTitle.text=item.name
 
         }
     }

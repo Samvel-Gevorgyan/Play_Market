@@ -1,12 +1,14 @@
-package com.playmarket.fragment.fragmentApps
+package com.playmarket.adapter.viewPagerAdapter
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
-import com.playmarket.fragment.fragmentGames.FragmentKindsGame
+import com.playmarket.fragment.apps.FragmentCategoriesApps
+import com.playmarket.fragment.games.FragmentKindsGame
+import com.playmarket.fragment.games.FragmentTopChartsGame
 
 
-class PageAdapterApps(fm:FragmentManager):  FragmentStatePagerAdapter(fm) {
+class PageAdapterApps(fm:FragmentManager,private val items: MutableList<Any> ):  FragmentStatePagerAdapter(fm) {
 
 
     override fun getCount(): Int {
@@ -16,7 +18,7 @@ class PageAdapterApps(fm:FragmentManager):  FragmentStatePagerAdapter(fm) {
     override fun getItem(position: Int): Fragment {
         return when (position) {
             0 -> {
-                FragmentTopChartsApps()
+                FragmentTopChartsGame(items)
             }
             1 -> {
                 FragmentKindsGame()
@@ -25,7 +27,7 @@ class PageAdapterApps(fm:FragmentManager):  FragmentStatePagerAdapter(fm) {
                 FragmentCategoriesApps()
             }
             else ->{
-                FragmentTopChartsApps()
+                FragmentTopChartsGame(items)
             }
         }
 

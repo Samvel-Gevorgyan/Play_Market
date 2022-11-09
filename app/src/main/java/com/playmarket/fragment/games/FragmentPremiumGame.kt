@@ -1,4 +1,4 @@
-package com.playmarket.fragment.fragmentGames
+package com.playmarket.fragment.games
 
 import android.os.Bundle
 import android.view.LayoutInflater

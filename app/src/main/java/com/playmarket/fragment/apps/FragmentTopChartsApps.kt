@@ -1,4 +1,4 @@
-package com.playmarket.fragment.fragmentApps
+package com.playmarket.fragment.apps
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.playmarket.R
-import com.playmarket.adapter.RecyclerAdapterApps
-import com.playmarket.data.FakeDataSet
+import com.playmarket.adapter.recyclerAdapter.RecyclerAdapterApps
+import com.playmarket.data.FakeData
 import com.playmarket.databinding.FragmentAppsTopChartsBinding
 
 class FragmentTopChartsApps:Fragment() {
@@ -31,7 +31,7 @@ class FragmentTopChartsApps:Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.recyclerViewTopChart.apply {
             layoutManager=LinearLayoutManager(activity)
-            adapter= RecyclerAdapterApps(FakeDataSet.getData(),context)
+            adapter= RecyclerAdapterApps(FakeData.getDataApps(),context)
 
 
 

@@ -1,4 +1,4 @@
-package com.playmarket.fragment.fragmentGames
+package com.playmarket.fragment.games
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,11 +8,10 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.playmarket.Communicator
 import com.playmarket.R
-import com.playmarket.adapter.RecyclerAdapterApps
-import com.playmarket.data.FakeDataSet
+import com.playmarket.adapter.recyclerAdapter.RecyclerAdapterApps
 import com.playmarket.databinding.FragmentGamesTopChartsBinding
 
-class FragmentTopChartsGame : Fragment() {
+class FragmentTopChartsGame (private val items: MutableList<Any>): Fragment() {
 
     private lateinit var binding: FragmentGamesTopChartsBinding
     private lateinit var communicator: Communicator
@@ -36,7 +35,7 @@ class FragmentTopChartsGame : Fragment() {
 
         binding.recyclerView.apply {
             layoutManager = LinearLayoutManager(activity)
-            adapter = RecyclerAdapterApps(FakeDataSet.getData(), context)
+            adapter = RecyclerAdapterApps(items, context)
 
         }
         binding.categoriesButton.setOnClickListener {

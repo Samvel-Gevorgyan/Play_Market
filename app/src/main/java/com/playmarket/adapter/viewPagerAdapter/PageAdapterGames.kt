@@ -1,15 +1,16 @@
-package com.playmarket.fragment.fragmentGames
+package com.playmarket.adapter.viewPagerAdapter
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
-import com.google.android.material.bottomsheet.BottomSheetDialog
-import com.playmarket.Communicator
-import com.playmarket.botomSheet.BottomSheet
+import com.playmarket.data.FakeData
+import com.playmarket.fragment.games.FragmentKindsGame
+import com.playmarket.fragment.games.FragmentPremiumGame
+import com.playmarket.fragment.games.FragmentTopChartsGame
 
 class PageAdapterGames(fm: FragmentManager):  FragmentStatePagerAdapter(fm) {
 
-    private lateinit var communicator: Communicator
+
 
     override fun getCount(): Int {
         return 3
@@ -19,7 +20,7 @@ class PageAdapterGames(fm: FragmentManager):  FragmentStatePagerAdapter(fm) {
 
         return when (position) {
             0 -> {
-                FragmentTopChartsGame()
+                FragmentTopChartsGame(FakeData.getDataGames())
             }
             1 -> {
                 FragmentKindsGame()
@@ -28,7 +29,7 @@ class PageAdapterGames(fm: FragmentManager):  FragmentStatePagerAdapter(fm) {
                 FragmentPremiumGame()
             }
             else -> {
-                FragmentTopChartsGame()
+                FragmentTopChartsGame(FakeData.getDataGames())
 
             }
         }

@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.playmarket.R
-import com.playmarket.adapter.RecyclerAdapterCategories
+import com.playmarket.adapter.recyclerAdapter.RecyclerAdapterCategories
 import com.playmarket.databinding.BottomSheetCategoriesDialogBinding
 
 class BottomSheet: BottomSheetDialogFragment() {

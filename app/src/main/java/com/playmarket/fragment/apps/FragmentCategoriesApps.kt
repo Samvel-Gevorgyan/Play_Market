@@ -1,4 +1,4 @@
-package com.playmarket.fragment.fragmentApps
+package com.playmarket.fragment.apps
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.playmarket.R
-import com.playmarket.adapter.RecyclerAdapterCategories
+import com.playmarket.adapter.recyclerAdapter.RecyclerAdapterCategories
 import com.playmarket.databinding.FragmentAppsCategoriesBinding
 
 

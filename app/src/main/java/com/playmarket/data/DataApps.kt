@@ -1,8 +1,8 @@
 package com.playmarket.data
 
 data class DataApps(
-    val appImage: String,
-    val appName:String,
-    val appDescription:String,
-    val appRating:String
+    val imageUrl: String,
+    val name:String,
+    val description:String,
+    val rating:String
 )

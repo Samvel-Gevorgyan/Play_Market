@@ -1,4 +1,4 @@
-package com.playmarket.adapter
+package com.playmarket.adapter.recyclerAdapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -8,15 +8,19 @@ import com.bumptech.glide.Glide
 import com.playmarket.data.DataApps
 import com.playmarket.databinding.RecylceViewAppsBinding
 
+
 class RecyclerAdapterApps(private val items: MutableList<Any>, val context: Context) :
     RecyclerView.Adapter<RecyclerAdapterApps.ViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+
         val binding =
             RecylceViewAppsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(binding)
+
     }
+
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(items[position])
@@ -29,17 +33,16 @@ class RecyclerAdapterApps(private val items: MutableList<Any>, val context: Cont
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: Any) {
+
             (item as DataApps).let {
                 Glide.with(context)
-                    .load(item.appImage)
+                    .load(item.imageUrl)
                     .into(binding.appImage)
-                binding.appTitle.text = item.appName
-                binding.appDescription.text = item.appDescription
-                binding.appRating.text = item.appRating
+                binding.appTitle.text = item.name
+                binding.appDescription.text = item.description
+                binding.appRating.text = item.rating
 
             }
         }
-
-
     }
 }

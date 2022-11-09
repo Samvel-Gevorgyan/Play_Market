@@ -8,8 +8,8 @@ import com.playmarket.R
 import com.playmarket.botomSheet.BottomSheet
 import com.playmarket.botomSheet.BottomSheetRadioGroup
 import com.playmarket.databinding.ActivityMainBinding
-import com.playmarket.fragment.fragmentApps.FragmentApps
-import com.playmarket.fragment.fragmentGames.FragmentGames
+import com.playmarket.fragment.apps.FragmentApps
+import com.playmarket.fragment.games.FragmentGames
 
 
 class MainActivity : AppCompatActivity(), Communicator {
@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity(), Communicator {
         }
     }
 
-    private fun loadFragment(fragment: Fragment) {
+    override fun loadFragment(fragment: Fragment) {
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.container, fragment)
         transaction.addToBackStack(null)

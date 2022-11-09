@@ -1,4 +1,4 @@
-package com.playmarket.adapter
+package com.playmarket.adapter.recyclerAdapter
 
 import android.content.Context
 import android.view.LayoutInflater
